@@ -48,6 +48,5 @@ Copy the desired file for your target architecture to the output directory of th
 
 ## Original Licenses
 
-[Microsoft Detours - MIT](https://github.com/Microsoft/Detours/blob/master/LICENSE.md)
-
-[EasyHook - MIT](https://github.com/EasyHook/EasyHook/blob/master/LICENSE)
+* [Microsoft Detours - MIT](https://github.com/Microsoft/Detours/blob/master/LICENSE.md)
+* [EasyHook - MIT](https://github.com/EasyHook/EasyHook/blob/master/LICENSE)
