@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\dll\corehook\corehook.cpp">
+    <ClCompile Include="..\..\dll\corehook\corehook.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
