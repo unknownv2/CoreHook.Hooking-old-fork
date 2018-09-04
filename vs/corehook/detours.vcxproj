@@ -172,7 +172,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <TreatWarningAsError>true</TreatWarningAsError>
-      <PreprocessorDefinitions>_DEBUG;_LIB%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;DETOUR_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
@@ -195,6 +195,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PreprocessorDefinitions>_DEBUG;DETOUR_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <PreLinkEvent>
       <Command>ml /c /Sn /Fo $(IntDir)trampolinex86.obj /nologo ../../src/trampolinex86.asm</Command>
@@ -210,6 +211,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PreprocessorDefinitions>_DEBUG;DETOUR_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <PreLinkEvent>
       <Command>armasm -o $(IntDir)trampolinearm.obj ../../src/trampolinearm.asm</Command>
@@ -227,6 +229,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PreprocessorDefinitions>_DEBUG;DETOUR_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <PreLinkEvent>
       <Command>armasm64 -o $(IntDir)trampolinearm64.obj ../../src/trampolinearm64.asm</Command>
