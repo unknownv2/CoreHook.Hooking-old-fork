@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\ASM">
+      <UniqueIdentifier>{1719ba20-9551-4f19-aa83-2f33a4c63db0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\barrier.cpp">
@@ -54,10 +57,24 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\detours.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\detver.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\trampolinearm.asm">
+      <Filter>Source Files\ASM</Filter>
+    </None>
+    <None Include="..\..\src\trampolinearm64.asm">
+      <Filter>Source Files\ASM</Filter>
+    </None>
+    <None Include="..\..\src\trampolinex64.asm">
+      <Filter>Source Files\ASM</Filter>
+    </None>
+    <None Include="..\..\src\trampolinex86.asm">
+      <Filter>Source Files\ASM</Filter>
+    </None>
   </ItemGroup>
 </Project>

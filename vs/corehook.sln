@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "corehook", "corehook\corehook.vcxproj", "{57FBB06A-74F5-453B-A2AF-2C739AFB802B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{62199763-C868-4A65-A4BE-980F4182FA00} = {62199763-C868-4A65-A4BE-980F4182FA00}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "detours", "corehook\detours.vcxproj", "{62199763-C868-4A65-A4BE-980F4182FA00}"
 EndProject
