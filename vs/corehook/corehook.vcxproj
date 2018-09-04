@@ -40,6 +40,9 @@
   <ItemGroup>
     <None Include="..\..\dll\corehook\corehook.def" />
   </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\dll\corehook\corehook.rc" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{57FBB06A-74F5-453B-A2AF-2C739AFB802B}</ProjectGuid>
@@ -182,6 +185,9 @@
       <AdditionalDependencies>aux_ulib.lib;$(OutputPath)detours.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>"..\..\dll\corehook\corehook.def"</ModuleDefinitionFile>
     </Link>
+    <ResourceCompile>
+      <AdditionalOptions>/D DETOURS_BITS=32 %(AdditionalOptions)</AdditionalOptions>
+    </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
@@ -195,6 +201,9 @@
       <AdditionalDependencies>aux_ulib.lib;$(OutputPath)detours.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>"..\..\dll\corehook\corehook.def"</ModuleDefinitionFile>
     </Link>
+    <ResourceCompile>
+      <AdditionalOptions>/D DETOURS_BITS=32 %(AdditionalOptions)</AdditionalOptions>
+    </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <ClCompile>
@@ -208,6 +217,9 @@
       <AdditionalDependencies>aux_ulib.lib;$(OutputPath)detours.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>"..\..\dll\corehook\corehook.def"</ModuleDefinitionFile>
     </Link>
+    <ResourceCompile>
+      <AdditionalOptions>/D DETOURS_BITS=64 %(AdditionalOptions)</AdditionalOptions>
+    </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -216,6 +228,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>aux_ulib.lib;$(OutputPath)detours.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -225,6 +238,9 @@
       <Command>
       </Command>
     </PreBuildEvent>
+    <ResourceCompile>
+      <AdditionalOptions>/D DETOURS_BITS=64 %(AdditionalOptions)</AdditionalOptions>
+    </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -244,6 +260,9 @@
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
       <ModuleDefinitionFile>"..\..\dll\corehook\corehook.def"</ModuleDefinitionFile>
     </Link>
+    <ResourceCompile>
+      <AdditionalOptions>/D DETOURS_BITS=32 %(AdditionalOptions)</AdditionalOptions>
+    </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
@@ -261,6 +280,9 @@
       <AdditionalDependencies>aux_ulib.lib;$(OutputPath)detours.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>"..\..\dll\corehook\corehook.def"</ModuleDefinitionFile>
     </Link>
+    <ResourceCompile>
+      <AdditionalOptions>/D DETOURS_BITS=32 %(AdditionalOptions)</AdditionalOptions>
+    </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <ClCompile>
@@ -278,6 +300,9 @@
       <AdditionalDependencies>aux_ulib.lib;$(OutputPath)detours.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>"..\..\dll\corehook\corehook.def"</ModuleDefinitionFile>
     </Link>
+    <ResourceCompile>
+      <AdditionalOptions>/D DETOURS_BITS=64 %(AdditionalOptions)</AdditionalOptions>
+    </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -288,6 +313,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -295,6 +321,9 @@
       <AdditionalDependencies>aux_ulib.lib;$(OutputPath)detours.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>"..\..\dll\corehook\corehook.def"</ModuleDefinitionFile>
     </Link>
+    <ResourceCompile>
+      <AdditionalOptions>/D DETOURS_BITS=64 %(AdditionalOptions)</AdditionalOptions>
+    </ResourceCompile>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
