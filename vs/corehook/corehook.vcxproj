@@ -144,34 +144,42 @@
     <IncludePath>../../src;$(IncludePath)</IncludePath>
     <LibraryPath>$(LibraryPath)</LibraryPath>
     <TargetName>$(ProjectName)$(PlatformArchitecture)</TargetName>
+    <OutDir>..\..\bin.$(PlatformTarget)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>$(ProjectName)$(PlatformArchitecture)</TargetName>
     <IncludePath>../../src;$(IncludePath)</IncludePath>
+    <OutDir>..\..\bin.$(PlatformTarget)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <TargetName>$(ProjectName)32</TargetName>
     <IncludePath>../../src;$(IncludePath)</IncludePath>
+    <OutDir>..\..\bin.$(PlatformTarget)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <TargetName>$(ProjectName)64</TargetName>
     <IncludePath>../../src;$(IncludePath)</IncludePath>
+    <OutDir>..\..\bin.$(PlatformTarget)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <TargetName>$(ProjectName)$(PlatformArchitecture)</TargetName>
     <IncludePath>../../src;$(IncludePath)</IncludePath>
+    <OutDir>..\..\bin.$(PlatformTarget)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <TargetName>$(ProjectName)32</TargetName>
     <IncludePath>../../src;$(IncludePath)</IncludePath>
+    <OutDir>..\..\bin.$(PlatformTarget)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <TargetName>$(ProjectName)64</TargetName>
     <IncludePath>../../src;$(IncludePath)</IncludePath>
+    <OutDir>..\..\bin.$(PlatformTarget)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>$(ProjectName)$(PlatformArchitecture)</TargetName>
     <IncludePath>../../src;$(IncludePath)</IncludePath>
+    <OutDir>..\..\bin.$(PlatformTarget)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
