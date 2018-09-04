@@ -141,37 +141,37 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>../../include;$(IncludePath)</IncludePath>
+    <IncludePath>../../src;$(IncludePath)</IncludePath>
     <LibraryPath>$(LibraryPath)</LibraryPath>
     <TargetName>$(ProjectName)$(PlatformArchitecture)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>$(ProjectName)$(PlatformArchitecture)</TargetName>
-    <IncludePath>../../include;$(IncludePath)</IncludePath>
+    <IncludePath>../../src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <TargetName>$(ProjectName)32</TargetName>
-    <IncludePath>../../include;$(IncludePath)</IncludePath>
+    <IncludePath>../../src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <TargetName>$(ProjectName)64</TargetName>
-    <IncludePath>../../include;$(IncludePath)</IncludePath>
+    <IncludePath>../../src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <TargetName>$(ProjectName)$(PlatformArchitecture)</TargetName>
-    <IncludePath>../../include;$(IncludePath)</IncludePath>
+    <IncludePath>../../src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <TargetName>$(ProjectName)32</TargetName>
-    <IncludePath>../../include;$(IncludePath)</IncludePath>
+    <IncludePath>../../src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <TargetName>$(ProjectName)64</TargetName>
-    <IncludePath>../../include;$(IncludePath)</IncludePath>
+    <IncludePath>../../src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>$(ProjectName)$(PlatformArchitecture)</TargetName>
-    <IncludePath>../../include;$(IncludePath)</IncludePath>
+    <IncludePath>../../src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -188,6 +188,10 @@
     <ResourceCompile>
       <AdditionalOptions>/D DETOURS_BITS=32 %(AdditionalOptions)</AdditionalOptions>
     </ResourceCompile>
+    <PostBuildEvent>
+      <Command>if not exist "..\..\include" mkdir "..\..\include"
+xcopy /I /Y /D /R /K "..\..\src\*.h" "..\..\include"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <ClCompile>
@@ -204,6 +208,10 @@
     <ResourceCompile>
       <AdditionalOptions>/D DETOURS_BITS=32 %(AdditionalOptions)</AdditionalOptions>
     </ResourceCompile>
+    <PostBuildEvent>
+      <Command>if not exist "..\..\include" mkdir "..\..\include"
+xcopy /I /Y /D /R /K "..\..\src\*.h" "..\..\include"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <ClCompile>
@@ -220,6 +228,10 @@
     <ResourceCompile>
       <AdditionalOptions>/D DETOURS_BITS=64 %(AdditionalOptions)</AdditionalOptions>
     </ResourceCompile>
+    <PostBuildEvent>
+      <Command>if not exist "..\..\include" mkdir "..\..\include"
+xcopy /I /Y /D /R /K "..\..\src\*.h" "..\..\include"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -241,6 +253,16 @@
     <ResourceCompile>
       <AdditionalOptions>/D DETOURS_BITS=64 %(AdditionalOptions)</AdditionalOptions>
     </ResourceCompile>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <PostBuildEvent>
+      <Command>if not exist "..\..\include" mkdir "..\..\include"
+xcopy /I /Y /D /R /K "..\..\src\*.h" "..\..\include"
+
+</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -263,6 +285,10 @@
     <ResourceCompile>
       <AdditionalOptions>/D DETOURS_BITS=32 %(AdditionalOptions)</AdditionalOptions>
     </ResourceCompile>
+    <PostBuildEvent>
+      <Command>if not exist "..\..\include" mkdir "..\..\include"
+xcopy /I /Y /D /R /K "..\..\src\*.h" "..\..\include"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
     <ClCompile>
@@ -283,6 +309,10 @@
     <ResourceCompile>
       <AdditionalOptions>/D DETOURS_BITS=32 %(AdditionalOptions)</AdditionalOptions>
     </ResourceCompile>
+    <PostBuildEvent>
+      <Command>if not exist "..\..\include" mkdir "..\..\include"
+xcopy /I /Y /D /R /K "..\..\src\*.h" "..\..\include"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <ClCompile>
@@ -303,6 +333,10 @@
     <ResourceCompile>
       <AdditionalOptions>/D DETOURS_BITS=64 %(AdditionalOptions)</AdditionalOptions>
     </ResourceCompile>
+    <PostBuildEvent>
+      <Command>if not exist "..\..\include" mkdir "..\..\include"
+xcopy /I /Y /D /R /K "..\..\src\*.h" "..\..\include"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -324,6 +358,12 @@
     <ResourceCompile>
       <AdditionalOptions>/D DETOURS_BITS=64 %(AdditionalOptions)</AdditionalOptions>
     </ResourceCompile>
+    <PostBuildEvent>
+      <Command>if not exist "..\..\include" mkdir "..\..\include"
+xcopy /I /Y /D /R /K "..\..\src\*.h" "..\..\include"
+
+</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
